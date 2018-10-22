@@ -1,0 +1,22 @@
+#! /bin/bash
+
+TUMOR_BAM=/hpc/cog_bioinf/kloosterman/users/sdeblank/experiments/sharc_project/comparison_minimap2_NGMLR/NGMLR/bams/colo829_tumor_ngmlr_sorted_merged_65bnd.bam
+NORMAL_BAM=/hpc/cog_bioinf/kloosterman/users/sdeblank/experiments/sharc_project/comparison_minimap2_NGMLR/NGMLR/bams/colo829_normal_ngmlr_sorted_65bnd.bam
+
+TUMOR_NAME=$(basename $TUMOR_BAM .bam)
+NORMAL_NAME=$(basename $NORMAL_BAM .bam)
+
+TRUTH_BED=/hpc/cog_bioinf/kloosterman/users/sdeblank/experiments/sharc_project/comparison_minimap2_NGMLR/truth/COLO829_somatized_supp2_truth.bed
+TRUTH_VCF=/hpc/cog_bioinf/kloosterman/users/sdeblank/experiments/sharc_project/comparison_minimap2_NGMLR/truth/COLO829.somatized.supp2.vcf
+
+PURITIES=(100)
+PURITY_SAMPLES=$(seq 1)
+
+COVERAGES=(50 5 4 3 2 1)
+COVERAGES_SAMPLES=$(seq 10)
+
+OVERLAP_DISTANCE=1000
+
+NANOSV_CONFIG=/hpc/cog_bioinf/kloosterman/users/sdeblank/experiments/sharc_project/comparison_minimap2_NGMLR/NGMLR/config_NGMLR.ini
+
+LOGS_FOLDER=/hpc/cog_bioinf/kloosterman/users/sdeblank/experiments/sharc_project/comparison_minimap2_NGMLR/NGMLR/logs
