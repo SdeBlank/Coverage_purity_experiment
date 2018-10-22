@@ -1,3 +1,0 @@
-#! /bin/bash
-
-#COMPARE VCFS OF SAME SAMPLES
